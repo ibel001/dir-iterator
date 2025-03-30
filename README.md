@@ -56,7 +56,7 @@ use dir_iterator::*;
 fn main() {
     DirIterator::build_current()
         // filter all files which have extension `txt`
-        .filter(exclude("*.txt"))
+        .filter(filter::exclude("*.txt"))
         .for_each(|e| println!("{:?}", e.file_name()));
 }
 ```
@@ -77,7 +77,7 @@ fn main() {
         // build iterator
         .build()
         // exclude all hidden files
-        .filter(exclude(".*"))
+        .filter(filter::exclude(".*"))
         .for_each(|e| println!("{:?}", e.path()));
 }
 ```
