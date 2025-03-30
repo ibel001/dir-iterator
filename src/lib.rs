@@ -2,7 +2,7 @@
 
 #![allow(dead_code)]
 
-mod filter;
+pub mod filter;
 #[cfg(test)]
 mod test;
 
